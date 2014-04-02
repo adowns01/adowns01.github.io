@@ -9,6 +9,6 @@ p {
 	border-radius: 50%; 
 	margin: auto; 
 	background-color:gray;
-
+	display: inline;
 
 }
