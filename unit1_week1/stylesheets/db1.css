@@ -12,3 +12,8 @@ p {
 	background-color:gray;
 
 }
+
+#line_circles {
+	display: inline-block;
+
+}
