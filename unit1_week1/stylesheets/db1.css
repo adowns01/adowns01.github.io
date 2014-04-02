@@ -10,10 +10,10 @@ p {
 	border-radius: 50%; 
 	margin: auto; 
 	background-color:gray;
+	margin: 0%
 
 }
 
-#line_circles {
-	display: inline-block;
+#circle1 {
 
 }
