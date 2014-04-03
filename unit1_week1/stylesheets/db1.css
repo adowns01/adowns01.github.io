@@ -7,10 +7,10 @@ li {
 }
 
 .circle {
-	width:200px; 
-	height:200px; 
+	width:300px; 
+	height:300px; 
 	opacity: .6; 
-	border-radius: 100px;  
+	border-radius: 50%;  
 	background-color:gray;
 	display: inline-table;
 	text-align: center;
@@ -27,7 +27,7 @@ li {
 
 	border: 1px solid;
 	border-color: black;
-	width:812px;
+	width:2000px;
 	margin: auto;
 
 }
