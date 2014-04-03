@@ -10,13 +10,7 @@ p {
 	border-radius: 50%; 
 	margin: auto; 
 	background-color:gray;
-	margin: 0%
-	display: inline;
-
-}
-
-#circle1 {
-
-
+	margin: auto;
+	display: inline-table;
 
 }
