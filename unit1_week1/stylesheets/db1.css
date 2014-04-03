@@ -34,7 +34,7 @@ text-decoration: none;
 
 #subtitle{
 text-align:center;
-color: #A34E24;
+color: #F04C40;
 
 }
 
@@ -43,7 +43,7 @@ color: #A34E24;
 	height:250px; 
 	opacity: .6; 
 	border-radius: 50%;  
-	background-color: #EA7D24;
+	background-color: white;
 	display: inline-table;
 	text-align: center;
 
@@ -71,6 +71,8 @@ color: #A34E24;
 }
 
 body {
+
+	color: #003058
 	
 }
 
