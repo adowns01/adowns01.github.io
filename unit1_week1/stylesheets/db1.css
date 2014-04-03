@@ -11,14 +11,24 @@ li {
 	height:200px; 
 	opacity: .6; 
 	border-radius: 50%; 
-	margin: auto; 
+	border-radius: 50%;  
 	background-color:gray;
 	display: inline-table;
-	margin: 0 auto;
+	text-align: center;
 
 }
 
 #footer {
 	text-align: center;
+
+}
+
+
+#line_of_circles{
+
+	border: 1px solid;
+	border-color: black;
+	width:812px;
+	margin: auto;
 
 }
