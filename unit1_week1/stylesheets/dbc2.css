@@ -3,6 +3,9 @@ background-color: #F79B2E;
 width: 100%;
 text-align: center;
 color: black;
+border-bottom: 3px dashed black;
+padding-bottom: 5px;
+
 }
 
 #footer {
@@ -15,14 +18,20 @@ text-align: center;
 color: white;
 font-size: 10px;
 
+border-top: 3px dashed black;
+padding-top: 5px;
+margin-top: 10px;
+
 }
 
 #content_area {
 width: auto;
 height: auto;
-color: black;
+color: white;
 float:left;
-
+background-color: black;
+margin: 10px;
+padding: 0px 10px 10px 10px;
 }
 
 .sidebar {
@@ -32,9 +41,57 @@ background-color: #2EAFB0;
 width: 150px;
 height: 100%;
 text-align: center;
+margin: 10px 10px 10px 0px;
+border-radius: 5%;
+
 }
 
 body{
 
-background-color: #EFEFEF
+background-color: #EFEFEF;
+font-family: sans-serif;
 }
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#title{
+text-align: center;
+font-size: 30px; 
+text-decoration: none;
+
+
+
+} 
+
+#subtitle{
+text-align:center;
+font-size: 12px;
+
+}
+
+#profile_pic {
+	height: 140px;
+	width: 140px;
+	border-radius: 50%;
+
+}
+
+.pic_with_caption {
+
+	text-align: center;
+	padding: 5px;
+}
+
+#sidebar_links {
+
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #E1358D;
+}
+
