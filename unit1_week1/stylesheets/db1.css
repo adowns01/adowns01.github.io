@@ -26,11 +26,13 @@ img {
 
 #title{
 text-align: center;
+color:#796E24;
 
 } 
 
 #subtitle{
 text-align:center;
+color: #A34E24;
 
 }
 
@@ -39,7 +41,7 @@ text-align:center;
 	height:250px; 
 	opacity: .6; 
 	border-radius: 50%;  
-	background-color:gray;
+	background-color: #EA7D24;
 	display: inline-table;
 	text-align: center;
 
@@ -65,7 +67,9 @@ text-align:center;
 	margin-top: auto;
 }
 
-
+body {
+	background-color: #F9Df8D;
+}
 
 
 
