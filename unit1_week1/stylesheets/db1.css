@@ -2,10 +2,15 @@ p {
 	font-size: 9pt;
 }
 
+
 li {
 	font-size: 9pt;
+}
+
+ul {
+	font-size: 9pt;
 	width: 70%;
-	margin:auto;
+	margin: auto;
 }
 
 img {
