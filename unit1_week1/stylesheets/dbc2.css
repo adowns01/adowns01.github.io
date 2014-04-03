@@ -99,9 +99,10 @@ font-size: 12px;
 }
 
 
-li {
-	font-size: 9pt;
-	text-align: right;
+ul {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
 }
 
 .poem {
