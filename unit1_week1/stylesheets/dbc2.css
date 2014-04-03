@@ -90,7 +90,7 @@ font-size: 12px;
 	font-weight: bold;
 }
 
-a:hover {
+#first_item:hover {
 	color: #E1358D;
 }
 
