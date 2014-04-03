@@ -90,11 +90,11 @@ font-size: 12px;
 	font-weight: bold;
 }
 
-#first_item:hover {
+#first_item a:hover {
 	color: #E1358D;
 }
 
-#last_item:hover {
+#last_item a:hover {
 	color: #F79B2E;
 }
 
