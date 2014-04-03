@@ -95,3 +95,14 @@ a:hover {
 	color: #E1358D;
 }
 
+.poem {
+	font-size: 8pt;
+	line-height: 40%;
+}
+
+.poem_title {
+
+	color:#2EAFB0;
+	font-family: serif;
+	font-size: 12pt;
+}
