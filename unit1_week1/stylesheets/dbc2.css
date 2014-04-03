@@ -27,9 +27,8 @@ margin-top: 10px;
 #content_area {
 width: auto;
 height: auto;
-color: white;
+color: black;
 float:left;
-background-color: black;
 margin: 10px;
 padding: 0px 10px 10px 10px;
 }
