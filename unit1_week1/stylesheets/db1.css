@@ -7,8 +7,13 @@ li {
 }
 
 img {
+	margin-right: auto;
+	margin-left: auto;
+}
 
-margin:auto;
+#images {
+
+	text-align: center;
 
 }
 
