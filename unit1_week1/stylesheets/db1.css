@@ -3,6 +3,9 @@ p {
 	color: black;
 }
 
+a {
+	text-decoration: none;
+}
 
 li {
 	font-size: 9pt;
