@@ -1,0 +1,40 @@
+#header {
+background-color: #F79B2E;
+width: 100%;
+text-align: center;
+color: black;
+}
+
+#footer {
+background-color: #E1358D;
+width: 100%;
+height: 30px;
+position: absolute;
+bottom:0;
+text-align: center;
+color: white;
+font-size: 10px;
+
+}
+
+#content_area {
+width: auto;
+height: auto;
+color: black;
+float:left;
+
+}
+
+.sidebar {
+float: left;
+background-color: #2EAFB0;
+
+width: 150px;
+height: 100%;
+text-align: center;
+}
+
+body{
+
+background-color: #EFEFEF
+}
