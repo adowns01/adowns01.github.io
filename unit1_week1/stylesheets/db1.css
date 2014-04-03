@@ -1,5 +1,6 @@
 p {
 	font-size: 9pt;
+	color: black;
 }
 
 
@@ -27,6 +28,7 @@ img {
 #title{
 text-align: center;
 color:#796E24;
+text-decoration: none;
 
 } 
 
