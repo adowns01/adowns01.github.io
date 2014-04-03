@@ -12,6 +12,16 @@ margin:auto;
 
 }
 
+#title{
+text-align: center;
+
+} 
+
+#subtitle{
+text-align:center;
+
+}
+
 .circle {
 	width:250px; 
 	height:250px; 
