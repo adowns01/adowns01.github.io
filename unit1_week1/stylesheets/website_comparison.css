@@ -1,0 +1,61 @@
+#header {
+	width: 100%;
+	background-color:rgb(240, 232, 61);
+	text-align: center;
+	color: #403C25;
+	border-bottom: 3px dashed black;
+	padding-bottom: 5px;
+	margin: auto;
+}
+
+#title{
+
+color: #403C25;
+}
+
+#subtitle{
+
+}
+
+a {
+	text-decoration: none;
+}
+
+.column {
+	height: auto;
+	width: 300px;
+	background-color: rgba(113, 113, 113, .85);
+	padding: 5px;
+	margin: 15px 5px 5px 5px;
+	display: inline-table;
+	text-align: left;
+	color:white;
+	line-height: 150%;
+	top:10px;
+
+
+
+}
+
+#columns {
+
+	height: auto;
+	width: 970px;
+	margin: auto;
+
+
+}
+
+img {
+width: 80%; 
+background: white;
+margin: auto;
+margin-left: 30px;
+opacity: 1;
+}
+
+body {
+	background-image: url('/unit1_week1/images/pear_background.jpg');
+
+
+}
