@@ -1,0 +1,60 @@
+body {
+	
+	font-family:sans-serif;
+	background-color: white;
+	color: black;
+
+}
+
+#header{
+
+	color: white;
+	border-bottom-color: #7F909A;
+	border-bottom-style: solid;
+
+}
+
+img {
+	width:100%;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	display: block;
+	margin: auto;
+}
+
+
+#title {
+	display: inline;
+	text-align: center;
+	margin: auto;
+	font-size: 30pt;
+	color: #ED6639;
+}
+
+
+h3 {
+	text-align: center;
+	color: #385B9F;
+	padding-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #385B9F;
+}
+
+p {
+	text-align: left;
+	color: black;
+}
+
+#content_container{
+	height: auto;
+	width: 600px;
+	margin: auto;
+}
+
+
+
+
