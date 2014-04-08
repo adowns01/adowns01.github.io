@@ -10,6 +10,7 @@ body {
 	color: white;
 	border-bottom-color: #7F909A;
 	border-bottom-style: solid;
+	height: auto;
 
 }
 
@@ -17,23 +18,24 @@ body {
 	display: inline;
 	text-align: center;
 	margin: auto;
-	font-size: 30pt;
+	font-size: 2.5em;
 	color: #ED6639;
 }
 
 #subtitle {
 	text-align: center;
-	font-size: 50pt;
+	font-size: 4.5em;
+	padding-top: 10%;
 }
 
 .menu_item{
 	display: inline;
 
 	float: right;
-	font-size: 9pt;
+	font-size: .75em;
 	color: #385B9F;
 
- 	padding-left: 10px;
+ 	padding-left: 1.25%;
  	font-weight: bold;
 
 }
@@ -57,3 +59,68 @@ a:hover {
 	width: 100%;
 
 }
+
+.box {
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 3%;
+
+	text-align: center;
+
+	border-bottom: solid #ED6639;
+	margin: 2%;
+
+}
+
+
+.row_of_boxes{
+	text-align: center;
+
+}
+
+.row_of_boxes p{
+		font-size: 1em;
+
+}
+
+.emtpy_box {
+
+	border-color: white;
+}
+
+@media screen and (max-width: 480px){
+
+
+	.box{
+		display: block;
+		width:85%;
+		margin: auto;
+		padding-bottom: 10%;
+
+	}
+
+	#subtitle {
+		padding-top: 1%;
+		font-size: 3em;
+		text-align: center;
+		display: block;
+	}
+
+	.menu_item {
+		float: left;
+	}
+
+	#header{
+		text-align: center;
+	}
+
+}
+
+
+
+
+
+
