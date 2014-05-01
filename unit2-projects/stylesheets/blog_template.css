@@ -37,6 +37,19 @@ h3 {
 	text-align: left;
 	color: #385B9F;
 	padding-top: 20px;
+	font-size: 22pt;
+}
+
+h4 {
+	text-align: left;
+	color: #ED6639;
+	padding-top: 20px;
+	font-size: 12pt;
+
+}
+
+strong {
+	color: #385B9F;
 }
 
 a {
