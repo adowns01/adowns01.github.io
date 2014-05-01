@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postmodern Pachyderm</title>
+	<link rel="stylesheet", type="text/css", href="stylesheets/blog_template.css" >
+
+
+</head>
+<body>
+
+	<div id= "header">
+		<a href="http://adowns01.github.io/"><h1 id= "title">Postmodern Pachyderm</h1></a>
+	</div>
+
+	<div id= "content_container">
+		<h3>Classes in Ruby</h3>
+
+		<p>We are all about to start on a 9 week journey with DBC to take a class on Ruby (among other things). And I'm sure, in many of those classes about ruby we are going to learn about <em>classes in ruby</em>.</p>
+
+		<p>A <strong>class</strong> is a neat, organized package containing variables and methods that represents one type of item. I find it's easiest to think of classes as literal things. For instance, here is an outline of a book class.</p> 
+
+		<p class = "code">class Book<br>
+		&nbsp;def initialize (title, author)<br>
+		&nbsp;end<br>
+		end </p>
+
+		<p>Now I can make many book classes for all of the books that I own. Each books has the same basic structure, but each book has different information. The title and the author are going to be different for each book class that I create. Thus, I should save these items as <strong>instance variables</strong>.</p> 
+
+		<p><strong>Instance variables</strong> are only valid for each instance of a class. So, if I make a bunch of book classes, they will each have a different value for title and author. Different instances of my book class can't access this information from other instances. Why would Harry Potter need to know the author or title of any other books? </p>
+
+		<p><strong>Instance vairables</strong> are denoted by putting an <em>@</em> in front of the variable name.</p>
+
+		<p class = "code">class Book<br>
+		&nbsp;def initialize (title, author)<br>
+		&nbsp;&nbsp;@title = title<br>
+		&nbsp;&nbsp;@author = author<br>
+		&nbsp;end<br>
+		end</p>
+
+		<p>There are also <strong>class variables</strong>. These variables are the same for <em>all</em> instances of the class. <strong>Class variables </strong>are denoted by putting <em>@@</em> in front of the variable name. </p> 
+
+		<p class = "code">class Book<br>
+		&nbsp;@@is_alive? = false<br><br>
+
+		&nbsp;def initialize (title, author)<br>
+		&nbsp;&nbsp;@title = title<br>
+		&nbsp;&nbsp;@author = author<br>
+		&nbsp;end<br>
+		end</p>
+
+		<p>In the above example, the class variable <em>@@is_alive?</em> is false for ALL books. However, this variable isn't practical for this class. So I'm going to get rid of it. </p>
+
+		<p>One handy way to use class variables is for counting how many instances of a class you have created. See how <em>@@no_books</em> is used below.</p>
+
+		<p class = "code">class Book<br>
+		&nbsp;@@no_books = 0<br><br>
+		&nbsp;def initialize (title, author)<br>
+		&nbsp;&nbsp;@title = title<br>
+		&nbsp;&nbsp;@author = author<br>
+		&nbsp;&nbsp;@@no_books += 1<br>
+		&nbsp;end<br><br>
+
+		&nbsp;def how_many_books?()<br>
+		&nbsp;&nbsp;return @@no_books<br>
+		&nbsp;end<br>
+		end</p>
+
+		<p>With the code above the class variable <em>@@no_books</em> increases by one for every book created. </p>
+
+		<p>Let's see this class in action.</p>
+
+		<p class = "code"><comment># Make a new instance of the Book class<br></comment>
+		HP = Book.new( "Harry Potter", "JK Rowling")<br><br>
+
+		<comment># Check the value of the instance variable @title<br></comment>
+		puts HP.instance_variable_get(:@title) <comment># => "Harry Potter"<br><br>
+
+		# Check the value of the class variable @@no_books<br></comment>
+		puts HP.how_many_books?() <comment># => 1<br><br>
+
+		# Make a new instance of the Book class<br></comment>
+		FG = Book.new( "Fangirl", "Rainbow Rowell")<br><br>
+
+		<comment># Check the value of the instance variable @title<br>
+		# Notice, that this instance of the class book has a different Title<br></comment>
+		puts FG.instance_variable_get(:@title) <comment># => "Fangirl"<br><br>
+
+		# Check the value of the class variable @@no_books<br>
+		# Notice the number of books has increased by one<br></comment>
+		puts FG.how_many_books?() <comment># => 2<br><br>
+
+		# Make a new instance of the Book class<br></comment>
+		EA = Book.new( "The Eyre Affair", "Jasper Fforde")<br><br>
+
+
+		<comment># Check the value of the instance variable @title<br>
+		# Notice, that this instance of the class book has a different Title<br>
+		# than the previous two instances<br></comment>
+		puts EA.instance_variable_get(:@title) <comment># => "The Eyre Affair"<br><br>
+
+		# Check the value of the class variable @@no_books<br>
+		# Notice the number of books has increased by one<br></comment>
+		puts EA.how_many_books?() <comment># => 3<br><br>
+
+
+		# Now if you go back to the first instance of the class Book <br>
+		# that I created, and you find out how many books it has, notice<br>
+		# that it has changed as well. <br></comment>
+		puts HP.how_many_books?() <comment># => 3</comment></p>
+		<br><br>
+
+
+
+
+
+
+
+	</div>
+
+
+</body>
+</html>

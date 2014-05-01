@@ -47,6 +47,7 @@ a {
 p {
 	text-align: left;
 	color: black;
+	line-height: 22px;
 }
 
 #content_container{
@@ -61,6 +62,11 @@ p {
 	color: black;
 	padding: 5px;
 	font-family: courier;
+	font-size: 12px;
+}
+
+comment {
+	color: grey;
 }
 
 
