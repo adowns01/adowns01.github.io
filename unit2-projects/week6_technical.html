@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postmodern Pachyderm</title>
+	<link rel="stylesheet", type="text/css", href="stylesheets/blog_template.css" >
+
+
+</head>
+<body>
+
+	<div id= "header">
+		<a href="http://adowns01.github.io/"><h1 id= "title">Postmodern Pachyderm</h1></a>
+	</div>
+
+	<div id= "content_container">
+		<h3>Object Oriented Design vs. Functional Design</h3>
+
+		<h4>What Is Object-Oriented Programming?</h4> 
+
+		<p>I heard about Object Oriented Programming long before I know what it was. My CS-major friends would talk about it and I often saw it on the list of requirements for jobs I applied to. I didn't know what it was, I just knew that I didn't know how to do it. I built it up in my mind, so by the time we actually covered it in my C++ class, I was shocked by how *not* complicated the topic actually is.</p>
+
+		<p><strong>Object-Oriented Programming (OOP)</strong> is programming that uses objects (like classes) to design programs. Some benefits to OOP are: </p> 
+			<ul>
+				<li>Makes the program easier to read</li>
+				<li>It keeps unrelated data separate.</li>
+				<li>It is easier to update code.</li>
+			</ul>
+
+		<p>For example here is a cat and a polygon not in classes:</p> 
+
+		<p class = "code">cat_name = "Jason Paw-lick" </br>
+		cat_age = 2</br></br>
+
+		def meow(name)</br>
+		&nbsp;puts "#{name} says meow"</br>
+		end</br></br>
+
+		polygon_type = "Hexagon"</br>
+		polygon_sides = 6</br></br>
+
+		def print_sides (sides)</br>
+		&nbsp;puts "I have #{sides} sides."</br>
+		end</br></p>
+
+		<p>But because they are not encapsulated in objects I can start doing some weird things that don't make sense. For example:</p> 
+
+		<p class = "code">meow(polygon_type)<comment> #=> "Hexagon says meow"</comment></br></br>
+
+		print_sides(cat_age)<comment> #=> "I have 2 sides."</comment></br></p>
+
+		<p>Neither of those makes sense. A polygon can't meow (sadly) and Jason Paw-lick the cat has more than 2 sides.</p> 
+
+		<p>If these items were classes, these mishaps wouldn't be possible. For example:</p> 
+
+		<p class = "code">class Cat</br>
+		&nbsp;def initialize(name, age)</br>
+		&nbsp;&nbsp;@name = name</br>
+		&nbsp;&nbsp;@age = age</br>
+		&nbsp;end</br></br>
+
+		&nbsp;def meow</br>
+		&nbsp;&nbsp;puts "#{@name} says meow"</br>
+		&nbsp;end</br>
+
+		end </br></br>
+
+		class Polygon</br>
+		&nbsp;def initialize (type, sides)</br>
+		&nbsp;&nbsp;@type = type </br>
+		&nbsp;&nbsp;@sides = sides</br>
+		&nbsp;end</br></br>
+
+		&nbsp;def print_sides</br>
+		&nbsp;&nbsp;puts "I have #{@sides} sides."</br>
+		&nbsp;end</br>
+
+		end</br></p>
+
+		<p>Now that these two objects are in totally different classes so you can't program a polygon to meow or a cat to have a certain number of sides.</p> 
+
+		<h4>What is Functional Programming?</h4>
+
+		<p>Unlike OOP, I had not heard of functional programming before reading this blog post prompt.</p> 
+
+		<p><strong>Functional Programming (FP)</strong> is when functions (not objects) are the building blocks of the program. Specifically, very short concise functions. FP also doesn't believe in changing values once they have been assigned.</p>  
+
+		<h4>Don't update, create.</h4>
+
+		<p>Once a variable is created. Don't change it. If you have to change it, just create a new variable. For example:</p> 
+
+
+		<p class = "code">
+			<comment># Don't do this </comment></br>
+			nums = [1,2]</br>
+			nums << [3,4]</br>
+			nums <comment>#=> [1,2,3,4]</br></br>
+
+			# Do this instead</comment></br>
+			nums = [1,2]</br>
+			more_nums = [nums] + [3,4]</br>
+			more_nums  <comment>#=> [1,2,3,4]</comment></br>
+		</p>
+
+
+<!-- 		Comparing: "The problem with OO languages is they've got all this implicit environment that they carry around with them. You wanted a banana, but what you got was a gorilla holding the banana and the entire jungle." - John Armstrong  (creator of Erlang) -->
+
+
+		<h4>So, what's better?</h4>
+
+		<p>I only have experience with OOP, so I am very biased. But in general my response is:</p>
+
+		<img src= "http://i.imgur.com/SxprH.gif">
+
+		</br></br></br></br>
+
+
+
+
+	</div>
+
+
+</body>
+</html>
