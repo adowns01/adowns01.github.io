@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postmodern Pachyderm</title>
+	<link rel="stylesheet", type="text/css", href="stylesheets/blog_template.css" >
+
+
+</head>
+<body>
+
+	<div id= "header">
+		<a href="http://adowns01.github.io/"><h1 id= "title">Postmodern Pachyderm</h1></a>
+	</div>
+
+		<div id= "content_container">
+
+	<h3>Optimizing Your SQL Queries</h3>
+
+	<p>With a small database, the difference between optimized queries and non-optimized queries is typically so small that the user doesn't even notice. But as databases become exponentially larger, the time difference between good code and bad code increases exponentially too. Here are some basic tips to keep in mind to keep your queries quick.</p>
+
+	<h4>Simplify your queries</h4>
+
+	<p class = "code">
+	<comment># don't do this</comment></br>
+	SELECT name FROM list_name</br>
+	WHERE income + 20000 > 40000</br></br>
+
+	<comment># do this instead</comment></br>
+	SELECT name FROM </br>
+	WHERE income > 20000</br></br>
+
+	<comment># don't do this</comment></br>
+	SELECT name FROM list_name</br>
+	WHERE income > 40000 AND income < 100000</br></br>
+
+	<comment># do this </comment></br>
+	SELECT name FROM list_name</br>
+	WHERE income BETWEEN 40000 AND 100000</p></br></br>
+
+	<h4>Use column names instead of *</h4> 
+
+	<p>Don't print out every column unless you have to</p>
+	<p class = "code">
+	<comment># don't do this</comment> </br>
+	SELECT * FROM list_name</br></br>
+
+	<comment># do this </comment></br>
+	SELECT name, income FROM list_name </p></br>
+
+
+	<h4>Don't use full wildcards unless absolutely necessary</h4>
+
+	<p class = "code">
+	<comment># don't do this </comment></br>
+	SELECT first_name FROM list_name </br>
+	WHERE first_name = '%Ame%'</br></br>
+
+	<comment># do this</comment> </br>
+	SELECT first_name FROM list_name </br>
+	WHERE first_name = 'Ame%' </br></br>
+
+	<comment># don't do this </comment></br>
+	SELECT last_name FROM list_name </br>
+	WHERE last_name = '%wns%'</br></br>
+
+	<comment># do this </comment></br>
+	SELECT last_name FROM list_name </br>
+	WHERE last_name = '%wns'</p></br></br>
+
+
+	<h4>Don't use COUNT when you can use EXIST</h4>
+
+	<p class = "code">
+	<comment># don't do this </comment></br>
+	SELECT name FROM list_name </br>
+	WHERE COUNT(num_pets) > 0 </br></br>
+
+	<comment># do this </comment></br>
+	SELECT name FROM list_name </br>
+	WHERE EXISTS(num_pets) </p></br></br>
+
+	</div>
+</br></br></br></br>
+
+
+</body>
+</html>
