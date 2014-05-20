@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postmodern Pachyderm</title>
+	<link rel="stylesheet", type="text/css", href="stylesheets/blog_template.css" >
+
+
+</head>
+<body>
+	<script type="text/javascript">
+		function toggleMe(a){
+			var e=document.getElementById(a);
+			if(!e)return true;
+			if(e.style.display=="none"){
+				e.style.display="block"
+			}
+			else{
+				e.style.display="none"
+			}
+			return true;
+		}
+	</script>
+
+	<div id= "header">
+		<a href="http://adowns01.github.io/"><h1 id= "title">Postmodern Pachyderm</h1></a>
+	</div>
+
+	<div id= "content_container">
+		<h3>An Introduction to Sorting</h3>
+		<img src="http://img1.wikia.nocookie.net/__cb20070904090936/harrypotter/images/0/03/Sorting_Hat.jpg">
+
+		<p>My two favorite coding/math things to nerd out about are sorting and primes, which is why I was so excited to write this blog post. My origional opening sentence was "SORTING IS SERIOUSLY ONE OF MY FAVORITE THINGS EVER GUYS" becasue sorting is awesome.</p>
+
+		<p>Seriously, it's facinating. My least favorite part about Ruby is that I no longer need to write sorting algorithms becasue there is a handy #sort method.</p>
+
+		<p>This blog post is going to go over three sorting algorithms: <a href = "#bubble">bubble sort</a>, <a href = "#merge">merge sort</a>, and <a href = "#quick">quick sort</a>. </p>
+
+		<h4 id = "bubble">Bubble Sort</h4> 
+
+		<p><strong>The Idea:</strong> compare the items next to each other in the array. Switch them if needed, then continue down the array. It's called bubble sort becasue the elements in the array "bubble" to their spot.</p></br>
+
+		<p>Below are exact steps for the algorithm:</p>
+			<ol>
+				<li>Look the first element in the array. If it is larger than the next element in the array, swap the two numbers.</li></br>
+				<li>Move to the next index in the array and do the same comparison as in step 1.</li></br>
+				<li>Repeat step 2 until you reach the end of the array.</li></br>
+				<li>When you reach the end of the array, go back to the beginning and start at step 1 again.</li></br>
+				<li>Repeat until all items are sorted.</li></br></br>
+			</ol>
+
+		<p> Watch the following gif as you read through the steps above.</p>
+		<img src = "http://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"></br>
+
+		<input type="button" onclick="return toggleMe('para1')" value="See an example of bubble sort"><br>
+		<p id="para1" style = "display:none">
+		CONTENT
+		</p><br>
+
+		<input type="button" onclick="return toggleMe('para2')" value="See bubble sort in Ruby"><br>
+		<p id="para2" style = "display:none">
+		CONTENT
+		</p><br><br>
+
+		<img src = "http://s3-ec.buzzfed.com/static/enhanced/webdr01/2013/6/25/10/anigif_enhanced-buzz-15688-1372172073-4.gif">
+		<p class = "caption">That was a lot of words you just read. Take a breather and look at a cute bunny before moving on. </p>
+
+		<h4 id = "merge">Merge Sort</h4> 
+
+		<p>An important concept in merge sort, and sorting in general, is that <strong>an array of length 1 is sorted</strong>. For example, the array [2] is sorted. This may seem basic, but it is the foundation of the next two sorting algorithms.</p>
+
+		<p>Before jumping into merge sort, let's think about merging two arrays that are already sorted.</p>
+
+		<p>Array1 = [1, 3, 5, 9] &nbsp Array2 = [2, 4, 6, 8]</p>
+
+		<p>To merge them <em>and sort them</em> at the same time:
+		<ol>
+			<li>create an empty array called sorted_array</li><br>
+		 	<li>compare the first element in each array</li><br>
+		 	<li>add the smaller element to sorted_array</li><br>
+		 	<li>repeat steps 2-3 until all items are in sorted_array</li><br>
+		 </ol>
+
+		<input type="button" onclick="return toggleMe('para3')" value="See the merge algorithm in action"><br>
+		<div id="para3" style = "display:none">
+			<p>Array1 = [1, 3, 5, 9]</p>
+			<p>Array2 = [2, 4, 6, 8]</p>
+			<p>sorted_array = []</p><br>
+
+			<p>Array1 = [3, 5, 9]</p>
+			<p>Array2 = [2, 4, 6, 8]</p>
+			<p>sorted_array = [1]</p><br>
+
+			<p>Array1 = [3, 5, 9]</p>
+			<p>Array2 = [4, 6, 8]</p>
+			<p>sorted_array = [1, 2]</p><br>
+
+			<p>Array1 = [5, 9]</p>
+			<p>Array2 = [4, 6, 8]</p>
+			<p>sorted_array = [1, 2, 3]</p><br>
+
+			<p>Array1 = [5, 9]</p>
+			<p>Array2 = [6, 8]</p>
+			<p>sorted_array = [1, 2, 3, 4]</p><br>
+
+			<p>Array1 = [9]</p>
+			<p>Array2 = [6, 8]</p>
+			<p>sorted_array = [1, 2, 3, 4, 5]</p><br>
+
+			<p>Array1 = [9]</p>
+			<p>Array2 = [8]</p>
+			<p>sorted_array = [1, 2, 3, 4, 5, 6]</p><br>
+
+			<p>Array1 = [9]</p>
+			<p>Array2 = []</p>
+			<p>sorted_array = [1, 2, 3, 4, 5, 6, 8]</p><br>
+
+			<p>Array1 = []</p>
+			<p>Array2 = []</p>
+			<p>sorted_array = [1, 2, 3, 4, 5, 6, 8, 9]</p><br>
+
+			<p>Sorting complete!</p><br>
+		</div>
+		<br>
+
+		<p>Now we know how to take two sorted arrays and merge them into one sorted array. So how does this help us with an unsorted array like [5,2,7,8,1,9,3,6]?</p>
+
+		<p>Remember what I said in the beginning? <strong>All arrays of length one are sorted!</strong> So turn the unsorted array into a combination of sorted arrays.</p>
+
+		<p>The unsorted array [5,2,7,8,1,9,3,6] now becomes a combination of 8 sorted arrays of length one!</p>
+
+		<p class = "array"> [5] + [2] + [7] + [8] + [1] + [9] + [3] + [6]</p>
+
+		<p> Now go through two by two and merge the arrays, like we did above. The arrays become:</p>
+
+		<p class = "array"> [2,5] + [7,8] + [1,9] + [3,6]</p>
+
+		<p> Look at that! Now we have four arrays that are sorted. Do you see where this is going? Now go through two by two and merge the arrays.</p>
+
+		<p class = "array"> [2,5,7,8] + [1,3,6,9]</p>
+
+		<p> Now we have 2 sorted arrays. Merge them one last time.</p> 
+
+
+		<p class = "array"> [1, 2, 3, 5, 6, 7, 8, 9]</p>
+		<p> Now we have a sorted array!</p>
+
+		<img src = "http://media0.giphy.com/media/7JL9tXM3n81I4/200.gif">
+		<p class = "caption">Wow. You finished another section! Dumbledore gives you a hearty round of applause. </p>
+		<h4 id = "quick">Quick Sort</h4>
+
+		<p>Oh, quick sort, you are so cool, but so hard to explain. When I learned quick sort in class, my professor took a whole class period and made us act it out multiple times so we would fully understand it.</p>
+
+		<p><strong>The idea:</strong> Assign a number in the array the role of "pivot". Go through the array, put all elements smaller than it to the left of the pivot and put all numbers larger than it to the right of the pivot. Now the pivot is in the exact right spot with two unsorted arrays on either side.</p> 
+
+		<p>Call this algorithm again on the arrays on either side of the pivot. Now both of these arrays will get a pivot and the formula continues. </p>
+
+		<p>Keep calling this formula on smaller and smaller arrays until each array is one item long, and thus sorted.</p>
+
+			<input type="button" onclick="return toggleMe('para4')" value="See quick sort algorithm in action"><br>
+		<div id="para4" style = "display:none">
+
+			<p><strong>Step 1:</strong> Randomly assign pivot <br>
+			<strong>Step 2:</strong> Put all # below pivot to the left of the pivot and all # above pivot to the right of the pivot<br>
+			<strong>Step 3:</strong> Now the pivot is in the perfect spot. Split into smaller arrays<br>
+			<strong>Step 4:</strong> Repeat<br><br>
+
+			Here is an array [3, 7, 9, 10, 5, 8, 14, 16, 1, 20, 12]<br><br>
+
+			Step 1: Pivot: 10<br>
+			Step 2: [3, 7, 9, 5, 8, 1, 10, 14, 16, 20, 12]<br>
+			Step 3: [3, 7, 9, 5, 8, 1] + [10] + [14, 16, 20, 12]<br><br>
+
+			Step 1: Pivot: 7<br>
+			Step 2: [3, 5, 1, 7, 9, 8] + [10] + [14, 16, 20, 12]<br>
+			Step 3: [3, 5, 1] + [7] + [9, 8] + [10] + [14, 16, 20, 12]<br><br>
+
+			Step 1: Pivot: 5<br>
+			Step 2: [1, 3, 5] + [7] + [9, 8] + [10] + [14, 16, 20, 12]<br>
+			Step 3: [1, 3] +[5] + [7] + [9, 8] + [10] + [14, 16, 20, 12]<br><br>
+
+			Step 1: Pivot: 1<br>
+			Step 2: [1, 3] +[5] + [7] + [9, 8] + [10] + [14, 16, 20, 12]<br>
+			Step 3: [1] + [3] +[5] + [7] + [9, 8] + [10] + [14, 16, 20, 12]<br><br>
+
+			Step 1: Pivot: 9<br>
+			Step 2: [1] + [3] +[5] + [7] + [8, 9] + [10] + [14, 16, 20, 12]<br>
+			Step 3: [1] + [3] +[5] + [7] + [8] + [9] + [10] + [14, 16, 20, 12]<br><br>
+
+			Step 1: Pivot: 16<br>
+			Step 2: [1] + [3] +[5] + [7] + [8, 9] + [10] + [14, 12, 16, 20]<br>
+			Step 3: [1] + [3] +[5] + [7] + [8] + [9] + [10] + [14, 12] +  [16] + [20]<br><br>
+
+			Step 1: Pivot: 12<br>
+			Step 2: [1] + [3] +[5] + [7] + [8] + [9] + [10] + [12, 14] +  [16] + [20]<br>
+			Step 3: [1] + [3] +[5] + [7] + [8] + [9] + [10] + [12] + [14] +  [16] + [20]<br><br>
+
+			And look at that! It's sorted!<br></p>
+		</div>
+
+		<br>
+
+	</div>
+
+
+</body>
+</html>
