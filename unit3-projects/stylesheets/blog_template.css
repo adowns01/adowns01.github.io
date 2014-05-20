@@ -44,7 +44,7 @@ h4 {
 	text-align: left;
 	color: #ED6639;
 	padding-top: 20px;
-	font-size: 12pt;
+	font-size: 14pt;
 
 }
 
@@ -82,6 +82,24 @@ comment {
 	color: grey;
 }
 
+input {
+	background-color:  #385B9F;
+	width: 100%;
+	color: white;
+	border: none;
+	box-shadow: none;
+	font-weight: bold;
+	text-align: left;
+	padding: 5px;
+}
 
+.array {
+	font-weight: bold;
+}
 
+.caption { 
+
+	font-size: 10px;
+	text-align: center;
+}
 
