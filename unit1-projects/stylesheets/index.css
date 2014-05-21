@@ -53,14 +53,16 @@ a:hover {
 }
 
 #footer {
-	border-top-color: #7F909A;
-	border-top-style: solid;
-	height: 30px;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 
+   position:absolute;
+   bottom:0;
+   width:90%;
+   height:30px;   /* Height of the footer */
+   background:#7F909A;
 }
+
+
+
 
 .box {
 	width: 150px;
@@ -93,14 +95,23 @@ a:hover {
 	border-color: white;
 }
 
+img{
+	width: 350px;
+	display: block;
+	margin: auto;
+	padding: 50px;
+}
+
+
 @media screen and (max-width: 480px){
 
 
 	.box{
 		display: block;
-		width:85%;
+		width:80%;
 		margin: auto;
-		padding-bottom: 10%;
+		padding-bottom: 2px;
+		padding-top: 20px;
 
 	}
 
@@ -112,21 +123,19 @@ a:hover {
 	}
 
 	.menu_item {
-		float: left;
+		float: center;
 	}
 
 	#header{
 		text-align: center;
 	}
 
+	img {
+		width:250px;
+	}
+
 }
 
-img{
-	width: 350px;
-	display: block;
-	margin: auto;
-	padding: 50px;
-}
 
 
 
