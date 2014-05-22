@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cheat Sheet</title>
+	<link rel="stylesheet", type="text/css", href="stylesheets/cheatsheet_template.css" >
+
+
+</head>
+<body>
+
+	<div id= "header">
+		<a href = "https://adowns01.github.io/unit3-projects/unit3_cheatsheet.html"><h1 id= "title">JavaScript Cheat Sheet</h1></a>
+	</div>
+
+	<div id = "content">
+		<div id = "table_of_contents">
+			<h2>Table of Contents</h2>
+			<a href = "#createObjects"><p>Creating Objects</p></a>
+			<a href = "#addingFunction"><p>Adding Functions to Objects</p></a>
+			<a href = "#iterateObject"><p>Iterate through an Object</p></a>
+		</div>
+
+
+		<h3 id = "createObjects">Creating Objects</h3>
+
+		<p>Literal Notation</p>
+		<p class = "code"> var myObject = {<br>
+    		&nbsp property1: value1,<br>
+    		&nbsp property2: value2<br>
+  			};<br></p>
+
+  		<p>Constructor</p>
+		<p class = "code">
+			var myObject = new Object();<br>
+			myObject[property1] = value1; <br>
+			myObject.property2 = value2;<br> 
+		</p>
+
+		<h3 id = "addingFunction">Addings Functions to Objects</h3>
+
+		<p>After object is created</p>
+		<p class = "code">
+			<comment>// First create an object</comment><br>
+			var car = {<br>
+			&nbsp color: "red",<br>
+			&nbsp year: 2016,<br>
+			&nbsp make: "Toyota",<br>
+			&nbsp model: "Corola"<br>
+			};<br><br>
+
+			<comment>// Then add a function</comment><br>
+			car.showColor = function(){<br>
+			&nbsp return this.color;<br>
+			};<br><br>
+
+			<comment>// Then call the function</comment><br>
+			car.showColor()<br>
+		</p>
+
+		<p>During object construction</p>
+		<p class = "code">
+			<comment>// Note: I created an object in an object here</comment><br>
+			car.gasTank = { <br>
+		    &nbsp capacity: 20,<br>
+		    &nbsp contents: 10,<br>
+		    &nbsp fillUp: function(){<br>
+		    &nbsp &nbsp this.contents = this.capacity;<br>
+		    &nbsp }<br>
+			};<br>
+		</p>
+
+		<h3 id = "iterateObject">Iterate through an Object</h3>
+		<p class = "code">
+			for (property in myObject){<br>
+		    &nbsp console.log("The property " + property + " has value " + object[property]);<br>
+		    };<br>
+		</p>
+
+
+
+	</div>
+
+</body>
+</html>
