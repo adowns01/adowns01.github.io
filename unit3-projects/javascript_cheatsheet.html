@@ -17,12 +17,76 @@
 	<div id = "content">
 		<div id = "table_of_contents">
 			<h2>Table of Contents</h2>
-			<a href = "#createObjects"><p>Creating Objects</p></a>
-			<a href = "#addingFunction"><p>Adding Functions to Objects</p></a>
-			<a href = "#iterateObject"><p>Iterating through an Object</p></a>
-		</div>
+			<a href = "#loops"><p>Loops</p></a>
+			<a href = "#for"><p class = "sub_item">For</p></a>
+			<a href = "#while"><p class = "sub_item">While and Do/While</p></a>
+			<a href = "#continue"><p class = "sub_item">Continue</p></a>
+			<a href = "#break"><p class = "sub_item">Break</p></a>
+			<a href = "#objects"><p>Objects</p></a>
+			<a href = "#createObjects"><p class = "sub_item">Creating Objects</p></a>
+			<a href = "#addingFunction"><p class = "sub_item">Adding Functions to Objects</p></a>
+			<a href = "#iterateObject"><p class = "sub_item">Iterating through an Object</p></a>
+			<a href = "#functionsForObjects"><p class = "sub_item">Functions for Objects</p></a> </div>
+
+	<loops  id = "loops">
+		<h2>Loops</h2>
+		<h3 id = "for">For</h3>
+		<p>For loops should be used when you know exactly how many times you need to loop.</p>
+		<p class = "code">
+			for (var i = 0; i < 5; i++) {<br>
+	    	&nbsp console.log(i)<br>
+			} <br>
+			<comment>// ==> 1, 2, 3, 4<br><br>
+
+			// if you already have an iterator defined, no need to make a new one</comment><br>
+			var i = 2;<br>
+			for (; i < 5; i++) { <br>
+			&nbsp console.log(i)<br>
+			}<br>
+			<comment>// ==> 2, 3, 4</comment><br><br>
+		</p>
+		<h3 id = "while">While and Do/While</h3>
+		<p>While loops should be used when you looping until a condition is satisfied.</p>
+		<p class = "code">
+			while (condition == false){<br>
+			&nbsp <comment>//do things</comment><br>
+			}<br><br>
+
+			<comment>// use a do/while loop if the loop should always run at least once</comment><br>
+			do {<br>
+			&nbsp <comment>// do things</comment><br>
+			}<br>
+			while (condition == false)<br><br>
+		</p>
+
+		<h3 id = "continue">Continue</h3>
+		<p>When the continue statement is called, the loop immediately skips to the next iteration.</p>
+		<p class = "code">
+			for (var i = 0; i < 4; i++) {<br>
+		    &nbsp if (i == 1) continue;<br>
+		    &nbsp console.log(i);<br>
+			}<br>
+			<comment>// ==> 0, 2, 3</comment><br><br>
+		</p>
+
+		<h3 id = "break">Break</h3>
+		<p> When the break statement is called, the loop immediately stops</p>
+		<p class = "code">
+			for (var i = 0; i < 4; i++) {<br>
+    		&nbsp if (i == 1) {break;}<br>
+    		&nbsp console.log(i)<br>
+			}<br>
+			<comment>// ==> 0 </comment><br><br>
+		</p>
 
 
+
+	</loops>
+
+
+
+	<objects id = "objects">
+		<h2>Objects</h2>
 
 		<h3 id = "createObjects">Creating Objects</h3>
 
@@ -35,11 +99,23 @@
   		<p>Constructor</p>
 		<p class = "code">
 			var myObject = new Object();<br>
-			myObject[property1] = value1; <br>
+			myObject["property1"] = value1; <br>
 			myObject.property2 = value2;<br> 
 		</p>
 
 		<h3 id = "addingFunction">Addings Functions to Objects</h3>
+
+		<p>During object construction</p>
+		<p class = "code">
+			<comment>// Note: I created an object in an object here</comment><br>
+			car.gasTank = { <br>
+		    &nbsp capacity: 20,<br>
+		    &nbsp contents: 10,<br>
+		    &nbsp fillUp: function(){<br>
+		    &nbsp &nbsp this.contents = this.capacity;<br>
+		    &nbsp }<br>
+			};<br>
+		</p>
 
 		<p>After object is created</p>
 		<p class = "code">
@@ -60,17 +136,7 @@
 			car.showColor()<br>
 		</p>
 
-		<p>During object construction</p>
-		<p class = "code">
-			<comment>// Note: I created an object in an object here</comment><br>
-			car.gasTank = { <br>
-		    &nbsp capacity: 20,<br>
-		    &nbsp contents: 10,<br>
-		    &nbsp fillUp: function(){<br>
-		    &nbsp &nbsp this.contents = this.capacity;<br>
-		    &nbsp }<br>
-			};<br>
-		</p>
+
 
 		<h3 id = "iterateObject">Iterating through an Object</h3>
 		<p class = "code">
@@ -79,7 +145,11 @@
 		    };<br>
 		</p>
 
+		<h3 id = "functionsForObjects">Functions for Objects</h3>
 
+		<p>
+			<a href= "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><strong>Object.keys(myObject)</strong></a>: returns an array of a given object's own enumerable properties.
+		</p></objects>
 
 	</div>
 
