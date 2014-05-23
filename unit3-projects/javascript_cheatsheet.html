@@ -17,6 +17,9 @@
 	<div id = "content">
 		<div id = "table_of_contents">
 			<h2>Table of Contents</h2>
+			<a href = "#conditionals"><p>Conditionals</p></a>
+			<a href = "#if"><p class = "sub_item">If, else, if else</p></a>
+			<a href = "#switch"><p class = "sub_item">Switch</p></a>
 			<a href = "#loops"><p>Loops</p></a>
 			<a href = "#for"><p class = "sub_item">For</p></a>
 			<a href = "#while"><p class = "sub_item">While and Do/While</p></a>
@@ -27,6 +30,54 @@
 			<a href = "#addingFunction"><p class = "sub_item">Adding Functions to Objects</p></a>
 			<a href = "#iterateObject"><p class = "sub_item">Iterating through an Object</p></a>
 			<a href = "#functionsForObjects"><p class = "sub_item">Functions for Objects</p></a> </div>
+
+
+	<conditionals id = "conditionals"> 
+		<h2>Conditionals</h2>
+		<h3 id = "if">if, else, if else</h3>
+		<p class = "code">
+			if (hour < 12){ <br>
+			&nbsp greeting = "Good Morning";<br>
+			}<br><br><br>
+
+			if (hour < 12){<br>
+			&nbsp greeting = "Good Morning";<br>
+			} else {<br>
+			&nbsp greeting = "Good Evening";<br>
+			}<br><br><br>
+
+			if (hour < 12) {<br>
+			&nbsp greeting = "Good Morning";<br>
+			} else if (hour < 18)<br>
+			&nbsp greeting = "Good Afternoon";<br>
+			} else {<br>
+			&nbsp greeting = "Good Evening";<br>
+			}<br><br>
+		</p>
+
+		<h3 id = "switch">Switch</h3>
+		<p class = "code">
+			switch (new Date().getDay()) {<br>
+			case 6:<br>
+			&nbsp text = "Today is Saturday";<br>
+			&nbsp break;<br>
+			case 0:<br>
+			&nbsp text = "Today is Sunday";<br>
+			&nbsp break;<br>
+			default:<br>
+			&nbsp text = "Looking forward to the Weekend";<br>
+			}<br><br>
+		</p>
+
+
+
+
+
+
+
+
+	</conditionals>
+
 
 	<loops  id = "loops">
 		<h2>Loops</h2>
@@ -77,14 +128,8 @@
     		&nbsp console.log(i)<br>
 			}<br>
 			<comment>// ==> 0 </comment><br><br>
-		</p>
-
-
-
-	</loops>
-
-
-
+		</p></loops>
+		
 	<objects id = "objects">
 		<h2>Objects</h2>
 
