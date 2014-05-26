@@ -60,7 +60,7 @@ a {
 p {
 	text-align: left;
 	color: black;
-	line-height: 22px;
+	line-height: 24px;
 }
 
 #content_container{
@@ -107,3 +107,6 @@ a p {
 	color:black;
 }
 
+li {
+	line-height: 24px;
+}
