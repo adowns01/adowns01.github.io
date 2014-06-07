@@ -1,0 +1,58 @@
+list {
+  display: block;
+}
+
+form {
+  display: inline-block;
+  margin: auto;
+}
+
+#delete_button {
+  display: block;
+}
+
+list, #container {
+  width: 280px;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+}
+
+body{
+  background-color: #FFEBCD;
+
+}
+
+h1{
+  font-family: sans-serif;
+  font-size: 50px;
+  color: #2587B2;
+
+}
+
+li {
+  background-color: #2587B2;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 16px;
+  color:#2587B2 ;
+  font-family: sans-serif;
+  padding: 5px;
+}
+ol{
+  color:black;
+}
+
+.list {
+  color: white;
+
+}
+
+/*.checkbox {
+  background: red;
+
+  border-radius: 100%;
+  position: relative;
+}*/
