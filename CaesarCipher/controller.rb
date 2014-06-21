@@ -11,10 +11,10 @@ class Controller
 		decrypt
 	end
 
-	def self.encrypt(shift = [3,4,2,1])
+	def self.encrypt(shift = [3, 8, 6, 9, 24, 7, 2, 19, 15, 18])
 		@message.char_array = Shifter.shift_char_array(@message.char_array, shift)
 		@message.save_text
-		clear_screen
+		View.clear_screen
 		@message.display
 	end
 
@@ -23,9 +23,7 @@ class Controller
 		encrypt(shifts)
 	end
 
-	def self.clear_screen
-		puts "\e[H\e[2J"
-	end 
+
 
 end
 

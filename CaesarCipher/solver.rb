@@ -1,6 +1,6 @@
 require_relative 'require'
 
-MAX_REPEAT_LENGTH = 7
+MAX_REPEAT_LENGTH = 15
 
 class Solver
   attr_accessor :text_array
