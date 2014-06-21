@@ -7,11 +7,11 @@ class Controller
 
 	def self.run(filename)
 		@message = Message.create_new_message(filename)
-		# encrypt
+		encrypt
 		decrypt
 	end
 
-	def self.encrypt(shift = [3, 8, 6, 9, 24, 7, 2, 19, 15, 18])
+	def self.encrypt(shift = make_rand_shift)
 		@message.char_array = Shifter.shift_char_array(@message.char_array, shift)
 		@message.save_text
 		View.clear_screen
@@ -23,7 +23,13 @@ class Controller
 		encrypt(shifts)
 	end
 
-
+	def self.make_rand_shift
+		length = rand(1..MAX_REPEAT_LENGTH)
+		shift = []
+		length.times {|i| shift << rand(1..26)}
+		puts "shift #{shift}"
+		return shift 
+	end 
 
 end
 
