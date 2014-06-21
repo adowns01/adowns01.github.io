@@ -14,14 +14,18 @@ class Controller
 	def self.encrypt(shift = [3,4,2,1])
 		@message.char_array = Shifter.shift_char_array(@message.char_array, shift)
 		@message.save_text
+		clear_screen
 		@message.display
 	end
 
 	def self.decrypt
-		shifts = Solver.finding_repeat(@message)
+		shifts = Solver.finding_shifts(@message)
 		encrypt(shifts)
 	end
 
+	def self.clear_screen
+		puts "\e[H\e[2J"
+	end 
 
 end
 
